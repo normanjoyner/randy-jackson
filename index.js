@@ -12,7 +12,7 @@ module.exports = (req, res, next) => {
         if(res._headers && res._headers['content-type'] && res._headers['content-type'].indexOf('application/json') !== -1) {
             return original_send.call(res, `{"message": "${message}"}`);
         } else {
-            return original_send.call(res, `Yeah, that's gonna be a ${res.statusCode} from me dawg`);
+            return original_send.call(res, message);
         }
     }
 
