@@ -1,7 +1,6 @@
 'use strict';
 
 module.exports = (req, res, next) => {
-    const self = this;
     const original_send = res.send;
 
     res.send = (body) => {
